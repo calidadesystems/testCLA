@@ -1,0 +1,13 @@
+name: "CLA Check"
+on:
+  issue_comment:
+    types: [created]
+  pull_request:
+    types: [opened,closed,synchronize]
+
+jobs:
+  cla-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CLA assistant lite
+        uses: contributor-assistant/github-action@v2.6.1            
